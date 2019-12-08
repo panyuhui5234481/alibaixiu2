@@ -16,12 +16,12 @@ $.ajax({
     }
 })
 //字符串转对象函数
-function serilizeObj (formdata){
-    var obj={};
-    var formdata=formdata.split('&')
-    $.each(formdata,function(i,value){
-       var value= value.split('=');
-       obj[value[0]]=value[1];
-    })
-    return obj
+function serializeObj(form){
+    var arr = form.serializeArray();
+    var obj = {};
+    arr.forEach((item) => {
+        obj[item.name] = item.value;
+    });
+    return obj;
 }
+
