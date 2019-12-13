@@ -24,4 +24,15 @@ function serializeObj(form){
     });
     return obj;
 }
+//根据地址栏参数id获取文章
+function getwenzhang(name) {
+    var paramsAry = location.search.substr(1).split("&");
+    for (var i = 0; i < paramsAry.length; i++) {
+      var tep = paramsAry[i].split("=");
+      if (tep[0] == name) {
+        return tep[1];
+      }
+    }
+    return -1;
+  }
 

@@ -67,7 +67,8 @@
   <script src="./assets/js/publi.js"></script>
   <script src="./assets/js/com.js"></script>
   <script src='./assets/js/list.js'></script>
-  <script type="text/html" id='wenzhangmod'>
+  <script src="./assets/js/seach.js"></script>
+  <script type="text/html" id='seachmod'>
     <h3>{{data[0].category.title}}</h3>
     {{each data}}
     <div class="entry">
@@ -76,7 +77,6 @@
         </div>
         <div class="main">
           <p class="info">{{$value.author.nickName}} 发表于{{$value.createAt | shijian}}</p>
-          <p class="brief">{{$value.content.substr(0,90)}}</p>
           <p class="extra">
             <span class="reading">阅读({{$value.meta.views}})</span>
             <span class="comment">评论({{$value.meta.comments}})</span>
